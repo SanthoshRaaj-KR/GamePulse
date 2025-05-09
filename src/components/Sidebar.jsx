@@ -13,8 +13,10 @@ const Sidebar = () => {
     >
       {/* Logo */}
       <div className="flex items-center justify-center">
-        <span className="text-red-500 text-2xl"><ing src={logo_dark} alt="logo" className="w-8 h-8"/></span>
-        {isExpanded && <span className="ml-2 font-bold">Hotflix</span>}
+        <span className="text-red-500 text-2xl">
+          <img src={logo_dark} alt="logo" className="w-8 h-8"/>
+        </span>
+        {isExpanded && <span className="ml-2 font-bold">StreamMax</span>}
       </div>
 
       {/* Nav Items */}
@@ -34,7 +36,7 @@ const Sidebar = () => {
 
 const SidebarItem = ({ icon, label, isExpanded }) => (
   <div className="flex items-center group cursor-pointer transition-all relative">
-    <div className={`flex items-center justify-center ${isExpanded ? '' : 'mx-auto'}`}>
+    <div className={`flex items-center justify-center p-2 rounded-full group-hover:bg-white/10 transition-all ${isExpanded ? '' : 'mx-auto'}`}>
       {icon}
     </div>
     {isExpanded ? (

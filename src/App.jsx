@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
-import TrendingSection from "./components/TrendingSection";
+import Homepage from "./components/Homepage";
 
 const App = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-zinc-900 text-white overflow-hidden">
       <Sidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
-      <TrendingSection isExpanded={isExpanded} />
+      <Homepage isExpanded={isExpanded} />
     </div>
   );
 };
